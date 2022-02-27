@@ -46,10 +46,28 @@ module.exports = class CartItem {
     }
 
     /**
+     * @brief This property sets the quantity
+     * @param value, the new quantity to set
+     * @exception InvalidQuantityException is thrown when the quantity is smaller than 1.
+     */
+    set Quantity(value) {
+        throw new Error();
+    }
+
+    /**
      * @brief This property gets the price
      */
     get Price() {
         return this.#price;
+    }
+
+    /**
+     * @brief This property gets the price
+     * @param value, the new price to set
+     * @exception InvalidPriceException is thrown when the price is smaller than 10.
+     */
+    set Price(value) {
+        throw new Error();
     }
 
     /**
