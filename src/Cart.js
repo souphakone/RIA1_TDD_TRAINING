@@ -11,7 +11,7 @@
 module.exports = class Cart{
 
     //region private attributes
-    items = null;
+    #items = null;
     //endregion private attributes
 
     /**

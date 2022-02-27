@@ -11,9 +11,9 @@
 module.exports = class CartItem {
 
     //region private attributes
-    articleId;
-    quantity;
-    price;
+    #articleId;
+    #quantity;
+    #price;
     //endregion private attributes
 
     //region public methods
@@ -27,39 +27,61 @@ module.exports = class CartItem {
      * @exception InvalidPriceException is thrown when the price is smaller than 10.
      */
     constructor(articleId, quantity, price) {
-        this.articleId = articleId;
-        this.quantity = quantity;
-        this.price = price;
+        this.#articleId = articleId;
+        this.#quantity = quantity;
+        this.#price = price;
     }
     /**
      * @brief This property gets the article id
      */
     get ArticleId() {
-        return this.articleId;
+        return this.#articleId;
     }
 
     /**
      * @brief This property gets the quantity
      */
     get Quantity() {
-        return this.quantity;
+        return this.#quantity;
     }
 
     /**
      * @brief This property gets the price
      */
     get Price() {
-        return this.price;
+        return this.#price;
     }
 
     /**
      * @brief This property gets the total
      */
     get Total() {
-        return this.quantity * this.price;
+        return this.#quantity * this.#price;
     }
     //endregion public methods
 
     //region private methods
     //endregion private methods
 }
+
+class Error {
+    constructor(message) {
+        this.message = message;
+    }
+}
+
+class CartItemException extends Error{
+}
+
+module.exports = class InvalidArticleIdException extends CartItemException{
+}
+
+module.exports = class InvalidQuantityException extends CartItemException{
+}
+
+module.exports = class InvalidPriceException extends CartItemException{
+}
+
+
+
+

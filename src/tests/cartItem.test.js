@@ -7,7 +7,11 @@
 
 "use strict";
 
-let CartItem = require('../CartItem.js');
+import CartItem from "../CartItem.js";
+
+const InvalidArticleIdException = require("../CartItem.js");
+const InvalidQuantityException = require("../CartItem.js");
+const InvalidPriceException = require("../CartItem.js");
 
 test('allGetters_NominalCase_Success', () => {
     //given
@@ -25,4 +29,43 @@ test('allGetters_NominalCase_Success', () => {
     expect(quantity).toEqual(cartItem.Quantity);
     expect(price).toEqual(cartItem.Price);
     expect(total).toEqual(cartItem.Total);
+})
+
+test('constructor_InvalidArticleId_ThrowException', () => {
+    //given
+    let articleId = -1;//Invalid article id (smaller than 1)
+    let quantity = 10;
+    let price = 20;
+
+    //when
+    expect(() => new CartItem(articleId, quantity, price)).toThrow(InvalidArticleIdException);
+
+    //then
+    //Exception is thrown
+})
+
+test('constructor_InvalidQuantity_ThrowException', () => {
+    //given
+    let articleId = 1;
+    let quantity = -10;//Invalid article id (smaller than 1)
+    let price = 20;
+
+    //when
+    expect(() => new CartItem(articleId, quantity, price)).toThrow(InvalidQuantityException);
+
+    //then
+    //Exception is thrown
+})
+
+test('constructor_InvalidPrice_ThrowException', () => {
+    //given
+    let articleId = 1;
+    let quantity = 10;
+    let price = 9;//Invalid price (smaller than 10)
+
+    //when
+    expect(() => new CartItem(articleId, quantity, price)).toThrow(InvalidPriceException);
+
+    //then
+    //Exception is thrown
 })
