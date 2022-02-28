@@ -25,10 +25,10 @@ test('allGetters_NominalCase_Success', () => {
     //we call the getters directly in assertion below
 
     //then
-    expect(articleId).toEqual(cartItem.ArticleId);
-    expect(quantity).toEqual(cartItem.Quantity);
-    expect(price).toEqual(cartItem.Price);
-    expect(total).toEqual(cartItem.Total);
+    expect(articleId).toEqual(cartItem.articleId);
+    expect(quantity).toEqual(cartItem.quantity);
+    expect(price).toEqual(cartItem.price);
+    expect(total).toEqual(cartItem.total);
 })
 
 test('constructor_InvalidArticleId_ThrowException', () => {
@@ -83,8 +83,8 @@ test('Quantity_SetQuantityNominalCase_Success', () => {
     cartItem.Quantity = expectedQuantity;
 
     //then
-    expect(expectedQuantity).toEqual(cartItem.Price);
-    expect(expectedTotal).toEqual(cartItem.Total);
+    expect(expectedQuantity).toEqual(cartItem.price);
+    expect(expectedTotal).toEqual(cartItem.total);
 })
 
 test('Quantity_SetQuantityInvalidValue_ThrowException', () => {

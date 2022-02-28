@@ -34,14 +34,14 @@ module.exports = class CartItem {
     /**
      * @brief This property gets the article id
      */
-    get ArticleId() {
+    get articleId() {
         return this.#articleId;
     }
 
     /**
      * @brief This property gets the quantity
      */
-    get Quantity() {
+    get quantity() {
         return this.#quantity;
     }
 
@@ -50,14 +50,14 @@ module.exports = class CartItem {
      * @param value, the new quantity to set
      * @exception InvalidQuantityException is thrown when the quantity is smaller than 1.
      */
-    set Quantity(value) {
+    set quantity(value) {
         throw new Error();
     }
 
     /**
      * @brief This property gets the price
      */
-    get Price() {
+    get price() {
         return this.#price;
     }
 
@@ -66,14 +66,14 @@ module.exports = class CartItem {
      * @param value, the new price to set
      * @exception InvalidPriceException is thrown when the price is smaller than 10.
      */
-    set Price(value) {
+    set price(value) {
         throw new Error();
     }
 
     /**
      * @brief This property gets the total
      */
-    get Total() {
+    get total() {
         return this.#quantity * this.#price;
     }
     //endregion public methods
