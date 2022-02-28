@@ -80,10 +80,10 @@ test('Quantity_SetQuantityNominalCase_Success', () => {
     let expectedTotal = 300;
 
     //when
-    cartItem.Quantity = expectedQuantity;
+    cartItem.quantity = expectedQuantity;
 
     //then
-    expect(expectedQuantity).toEqual(cartItem.price);
+    expect(expectedQuantity).toEqual(cartItem.quantity);
     expect(expectedTotal).toEqual(cartItem.total);
 })
 
@@ -96,7 +96,7 @@ test('Quantity_SetQuantityInvalidValue_ThrowException', () => {
     let invalidQuantityToSet = -1;//Invalid quantity (smaller than 1)
 
     //when
-    expect(() => cartItem.Quantity = invalidQuantityToSet).toThrow(InvalidQuantityException);
+    expect(() => cartItem.quantity = invalidQuantityToSet).toThrow(InvalidQuantityException);
 
     //then
     //Exception is thrown
@@ -112,11 +112,11 @@ test('Price_SetPriceNominalCase_Success', () => {
     let expectedTotal = 220;
 
     //when
-    cartItem.Price = expectedPrice;
+    cartItem.price = expectedPrice;
 
     //then
-    expect(expectedPrice).toEqual(cartItem.Price);
-    expect(expectedTotal).toEqual(cartItem.Total);
+    expect(expectedPrice).toEqual(cartItem.price);
+    expect(expectedTotal).toEqual(cartItem.total);
 })
 
 test('Price_SetPriceInvalidPrice_ThrowException', () => {
@@ -128,7 +128,7 @@ test('Price_SetPriceInvalidPrice_ThrowException', () => {
     let invalidPriceToSet = 9;//Invalid quantity (smaller than 10)
 
     //when
-    expect(() => cartItem.Quantity = invalidPriceToSet).toThrow(InvalidPriceException);
+    expect(() => cartItem.price = invalidPriceToSet).toThrow(InvalidPriceException);
 
     //then
     //Exception is thrown
