@@ -82,6 +82,7 @@ module.exports = class CartItem {
     //endregion private methods
 }
 
+//TODO externalize Error class (duplicate with Cart and CartItem)
 class Error {
     #message;
     constructor(message) {

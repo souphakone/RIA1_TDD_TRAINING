@@ -42,3 +42,21 @@ module.exports = class Cart{
     //region private methods
     //endregion private methods
 }
+
+//TODO externalize Error class (duplicate with Cart and CartItem)
+class Error {
+    #message;
+    constructor(message) {
+        this.#message = message;
+    }
+
+    get message(){
+        return this.#message;
+    }
+}
+
+class CartException extends Error{
+}
+
+module.exports = class EmptyCartException extends CartException{
+}
