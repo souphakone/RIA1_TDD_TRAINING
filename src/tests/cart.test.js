@@ -35,3 +35,5 @@ test('getTotalCart_EmptyCart_ThrowException', () => {
     //then
     //Exception is thrown
 })
+
+test('count')
