@@ -70,7 +70,7 @@ test('constructor_InvalidPrice_ThrowException', () => {
     //Exception is thrown
 })
 
-test('Quantity_SetQuantityNominalCase_Success', () => {
+test('quantity_SetQuantityNominalCase_Success', () => {
     //given
     let articleId = 1;
     let quantity = 10;
@@ -87,7 +87,7 @@ test('Quantity_SetQuantityNominalCase_Success', () => {
     expect(expectedTotal).toEqual(cartItem.total);
 })
 
-test('Quantity_SetQuantityInvalidValue_ThrowException', () => {
+test('quantity_setQuantityInvalidValue_ThrowException', () => {
     //given
     let articleId = 1;
     let quantity = 10;
@@ -102,7 +102,7 @@ test('Quantity_SetQuantityInvalidValue_ThrowException', () => {
     //Exception is thrown
 })
 
-test('Price_SetPriceNominalCase_Success', () => {
+test('price_SetPriceNominalCase_Success', () => {
     //given
     let articleId = 1;
     let quantity = 10;
@@ -119,7 +119,7 @@ test('Price_SetPriceNominalCase_Success', () => {
     expect(expectedTotal).toEqual(cartItem.total);
 })
 
-test('Price_SetPriceInvalidPrice_ThrowException', () => {
+test('price_SetPriceInvalidPrice_ThrowException', () => {
     //given
     let articleId = 1;
     let quantity = 10;
