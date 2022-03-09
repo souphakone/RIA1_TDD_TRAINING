@@ -3,8 +3,8 @@
  * @brief     This class is designed to manage a cart.
  * @author    Created by Nicolas.GLASSEY
  * @version   25-05-2020 - original (dedicated to ProjWebBdd)
- * @version   13-02-2022 - updated (dedicated to RIA1)
- * @version   08-03-2022 - update
+ *            13-02-2022 - updated (dedicated to RIA1)
+ *            08-03-2022 - update (Update Cart)
  */
 
 "use strict";
@@ -54,13 +54,25 @@ module.exports = class Cart{
     }
 
     /**
-     * @brief This method compare the current cart content and update the items:
+     * @brief This method compares the current cart content and update the items:
      *        Add new CartItem
      *        Update the quantity of an existing CartItem
      *        Remove an existing item if the new quantity to set is 0
      * @param items
      */
     updateCart(items){
+        throw new Error();
+    }
+
+    /**
+     * @brief This method remove CartItem from the Cart
+     * @param itemsToRemove
+     */
+    removeCartItem(itemsToRemove){
+        throw new Error();
+    }
+
+    emptyCart(){
         throw new Error();
     }
     //endregion public methods

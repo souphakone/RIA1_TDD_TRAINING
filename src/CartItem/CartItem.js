@@ -3,8 +3,8 @@
  * @brief     This class is designed to manage a cart item.
  * @author    Created by Nicolas.GLASSEY
  * @version   25-05-2020 - original (dedicated to ProjWebBdd)
- * @version   13-02-2022 - updated (dedicated to RIA1)
- * @version   08-03-2022 - update
+ *            13-02-2022 - updated (dedicated to RIA1)
+ *            08-03-2022 - update (Update Cart)
  */
 
 "use strict";
